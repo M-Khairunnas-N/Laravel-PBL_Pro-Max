@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.containerSidebar {
+    @apply flex gap-3 flex-col p-4 rounded-lg cursor-pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.active {
+    @apply bg-blue-700 text-white outline-white;
+}
+
+.activeHeader {
+    @apply lg:border-b-[3px] lg:border-blue-700;
+}
+
+.bg-posyandu {
+    @apply bg-[url('../../public/img/background1.png')] h-[600px] bg-cover bg-no-repeat;
+}
+
+.bg-berita {
+    @apply bg-[url('../../public/img/background2.png')] h-[600px] bg-cover bg-no-repeat;
+}
+
+.tableBody{
+    @apply px-5 lg:px-6 border-b py-2 lg:py-2 bg-white text-xs lg:text-base;
+}
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+      @apply w-[15px] h-[15px]
+    }
+  
+    .scrollbar::-webkit-scrollbar-track {
+      @apply rounded-full bg-gray-100
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb {
+      /* border: 3px solid #f6f7ed; */
+      @apply bg-neutral-400 rounded-full border-solid border-[#f7f4ed]
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #c0a0b9;
+      @apply bg-neutral-700
+    }
+  }
